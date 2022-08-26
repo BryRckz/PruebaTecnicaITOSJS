@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang=" app.request.locale|lower">
+    <head>
+        <title>Prueba Tecnica ITOSJS</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <link rel="icon" type="image/x-icon" href=" favicon.ico" />
+        <link rel="stylesheet" type="text/css" href=" Libraries/glyphicons_pro/glyphicons/web/html_css/css/glyphiconsModified.css"/>
+        <link rel="stylesheet" type="text/css" href=" Libraries/glyphicons_pro/glyphicons-halflings/web/html_css/css/glyphicons-halflings.css"/>
+        <link rel="stylesheet" type="text/css" href=" Libraries/bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href=" Libraries/bootstrap/css/bootstrapSmartWH.css"/>
+        <link rel="stylesheet" type="text/css" href=" Libraries/bootstrap-languages/languages.min.css"/>
+        <link rel="stylesheet" type="text/css" href=" Libraries/select2/dist/css/select2.min.css"/>
+        <link rel="stylesheet" type="text/css" href=" Libraries/select2/dist/css/select2-bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href=" Libraries/sweetalert2/dist/sweetalert2.css"/>
+        <link rel="stylesheet" type="text/css" href=" Libraries/fontawesome-free-6.1.1-web/css/all.css" />
+        <link rel="stylesheet" type="text/css" href=" bundles/catalogs/css/mainStyles.css?20211217"/>
+
+
+
+<script src=" Libraries/JSZip/dist/jszip.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src=" Libraries/bootstrap/js/bootstrap.min.js"></script>
+<script src=" Libraries/Respond/src/respond.js"></script>
+<script src=" Libraries/jqueryBrowser/jquery.browser.min.js"></script>
+<script src=" Libraries/select2/dist/js/select2.min.js"></script>
+<script src=" Libraries/select2/dist/js/i18n/'~app.request.locale~'.js"></script>
+<script src=" Libraries/jquery-form-plugin/jquery.form.min.js"></script>
+<script src=" bundles/catalogs/js/ajaxify_ec.js?20171122"></script>
+<script src=" Libraries/sweetalert2/dist/sweetalert2.js"></script>
+<script defer src=" Libraries/fontawesome-free-6.1.1-web/js/all.js"></script>
+
+<script type="text/javascript" language="javascript">
+
+
+
+//Funcion para determinar si el año es bisiesto en el calendario gregoriano.
+
+function esBisiesto()
+{
+    let año = document.getElementById("data").value; 
+      document.getElementById("data").innerHTML = año;
+    var dato = año % 100 === 0 ? año % 400 === 0 : año % 4 === 0;
+    if (dato === true){
+        var a = 'El año registrado es Bisiesto'
+    }else{
+        var a = "El año registrado no es Bisiesto"
+    }
+    document.getElementById('resultado').innerHTML = a;
+}
+
+
+function genera_tabla() {
+
+    var i, j, a, b;
+
+    document.getElementById("table").remove();
+
+    document.getElementById("div").innerHTML = "<table class = 'table-bordered' id= 'table'><thead><tr id='tFila'></tr></thead><tbody id ='tColumna'></tbody></table>"
+
+    //adquiero los valores dados en los inputs   
+    let Filas = document.getElementById("filas").value; 
+      document.getElementById("filas").innerHTML = Filas;
+
+    let Columnas = document.getElementById("columna").value; 
+      document.getElementById("columna").innerHTML = Columnas;
+    //realizo un ciclo For para generar cada campo de la tabla
+    for(i = 0; i < Filas; i++){
+
+         a = document.getElementById("tFila") ;
+        a.innerHTML += '<th>a</th>';
+    }
+    for(j = 0; j < Columnas; j++){
+
+        b = document.getElementById("tColumna") ;
+        b.innerHTML += '<tr id="trok'+j+'"></tr>';
+        for(i = 0; i < Filas; i++){
+            document.getElementById("trok"+j).innerHTML += '<td>b</td>';
+        }
+    }
+}
+
+function getRandomIntInclusive() {
+  var min = 1;
+  var max = 100;
+  var random = ''
+  var arreglo = []
+
+    for(i = 0; i < 20; i++){
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        random = Math.floor(Math.random() * (max - min + 1) + min);
+        arreglo.push(random);
+    }
+    document.getElementById('resultado1').innerHTML = arreglo;
+
+    let newArray = [];
+
+    for(let i = 0; i < arreglo.length; i++ ){
+        newArray.push(arreglo[i])
+        
+    }
+    
+    let dataLen = newArray.length;
+    //console.log("dataLen",dataLen);
+    for(let i=0; i < dataLen; i++){
+      for(let j=0; j < dataLen; j++){
+        if(j+1 !== dataLen){
+          if(newArray[j] > newArray[j+1]){
+            let swapElement = newArray[j+1];
+            newArray[j+1] = newArray[j];
+            newArray[j] = swapElement;
+          }
+        }  
+      }
+    }
+    document.getElementById('resultado2').innerHTML = newArray
+
+}
+
+
+function numberPar (){
+
+    var min = 1;
+    var max = 100;
+    var random = ''
+    var arreglo = []
+
+    for(i = 0; i < 20; i++){
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        random = Math.floor(Math.random() * (max - min + 1) + min);
+        arreglo.push(random);
+    }
+
+    let newArray = [];
+
+    for(let i = 0; i < arreglo.length; i++ ){
+        newArray.push(arreglo[i])
+        
+    }
+    
+    let dataLen = newArray.length;
+    //console.log("dataLen",dataLen);
+    for(let i=0; i < dataLen; i++){
+      for(let j=0; j < dataLen; j++){
+        if(j+1 !== dataLen){
+          if(newArray[j] > newArray[j+1]){
+            let swapElement = newArray[j+1];
+            newArray[j+1] = newArray[j];
+            newArray[j] = swapElement;
+          }
+        }  
+      }
+    }
+    console.log(newArray)
+    //return newArray;
+}
+
+function generar_letras_random(){
+    
+    var text = [];
+    var text2 = [];
+    var union = [];
+    var interseccion = [];
+    var diferencia = [];
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+    for (var i = 0; i < 10; i++){
+        text.push(possible.charAt(Math.floor(Math.random()* possible.length)));
+    }
+
+    for (var j = 0; j < 10; j++){
+        text2.push(possible.charAt(Math.floor(Math.random()* possible.length)));
+    }
+
+    document.getElementById('resultado3').innerHTML = text
+    document.getElementById('resultado4').innerHTML = text2
+
+    union = text.concat(text2);
+
+    interseccion = text.filter(x => text2.includes(x));
+
+    diferencia = text.filter(elemento => text2.indexOf(elemento) == -1);
+
+    const x = text.filter(x => !text2.includes(x));
+    const y = text2.filter(x => !text.includes(x));
+
+    const difference = x.concat(y);
+
+    document.getElementById('resultado5').innerHTML = union
+    document.getElementById('resultado6').innerHTML = interseccion
+    document.getElementById('resultado7').innerHTML = diferencia
+    document.getElementById('resultado8').innerHTML = difference
+}
+
+  /*GET /SieAPIRest/service/v1/series/SF43783/datos/oportuno HTTP/1.1
+  Accept: application/json
+  Bmx-Token: 18cb94363c46e9f481660e079484cc303a440e72e839dd513653a37e37406451
+  Accept-Encoding: gzip */
+
+
+  $(function(){
+	$.ajax({
+		url : 'https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF61745,SF60634,SF43773/datos/2022-08-07/2022-08-12?token=18cb94363c46e9f481660e079484cc303a440e72e839dd513653a37e37406451',
+		jsonp : 'callback',
+		dataType : 'jsonp', 
+		success : function(response) {  
+			var series=response.bmx.series;
+			
+
+			for (var i = 0; i < series.length; i++){
+				  var serie = series[i];
+          console.log(series);
+				  var reg ='<th>'+serie.titulo+'</th>'
+          document.getElementById('result').innerHTML += reg
+          for( var j = 0; j < series[i].datos.length; j++){
+            var data = '<td>'+serie.datos[j].fecha+'</td><td>'+serie.datos[j].dato+'</td>'
+            document.getElementById('result').innerHTML += data
+          }
+			}
+		}
+	});
+});
+
+
+</script>
+<body>
+  <div id="wrap">
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand">PuebaTecnicaITOSJS</a>
+              </div>
+          </div>
+      </nav>
+  </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <label><h3>Ingrese un año</h3></label>
+            <br>
+            <input type="text" id="data" >
+            <div id= "resultado"></div>
+            <br>
+            <button type="button" class="btn btn-primary"  onclick="esBisiesto();">Enviar fecha</button> 
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <label><h3>Filas</h3></label>
+            <br>
+            <input type="text" id="filas">
+        </div>
+        <div class="col-md-6">
+            <label><h3>Columnas</h3></label>
+            <br>
+            <input type="text" id="columna">
+        </div>
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary"  onclick="genera_tabla();">Generar Tabla</button>
+    <br>
+
+    <div id = 'div'>
+    <table class = 'table-bordered' id= 'table'>
+        <thead>
+            <tr id='tFila'>
+
+            </tr>
+        </thead>
+        <tbody id ='tColumna'>
+
+        </tbody>
+    </table>
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary"  onclick="getRandomIntInclusive();">Generar Numeros Aleatorios</button>
+
+    <div id= "resultado1"></div>
+    <label>Numeros ordendos de menor a Mayor </label>
+    <div id= "resultado2"></div>
+
+    <br>
+
+    <button type="button" class="btn btn-primary"  onclick="generar_letras_random();">Generar Letras Aleatorios</button>
+    <br>    
+    <label><h4>Arreglo A</h4></label>
+    <div id= "resultado3"></div>
+    <label><h4>Arreglo B</h4></label>
+    <div id= "resultado4"></div>
+    <label><h4>Union</h4></label>
+    <div id= "resultado5"></div>
+    <label><h4>Interseccion</h4></label>
+    <div id= "resultado6"></div>
+    <label><h4>Diferencia</h4></label>
+    <div id= "resultado7"></div>
+    <label><h4>Diferencia Simetrica</h4></label>
+    <div id= "resultado8"></div>
+    <h2>API</h2>
+    <table>
+      <tbody id='result'>
+      </tbody>
+    </table>
+
+</div>
+</body>
