@@ -1,0 +1,143 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 9, 2019, 10:57:28 AM
+    Author     : ECoronel
+*/
+.navbar-smart-wh {
+  background-color: #0F5738; /*0F5738*/
+  border-color: #003A21; /*003A21*/
+}
+.navbar-smart-wh .navbar-brand {
+  color: #ffffff;
+}
+.navbar-smart-wh .navbar-brand:hover,
+.navbar-smart-wh .navbar-brand:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+.navbar-smart-wh .navbar-text {
+  color: #ffffff;
+}
+.navbar-smart-wh .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-smart-wh .navbar-nav > li > a:hover,
+.navbar-smart-wh .navbar-nav > li > a:focus,
+dropdown-menu-smart-wh > a:hover,
+dropdown-menu-smart-wh > a:focus{
+  color: #ffffff;
+  background-color: #003A21;
+}
+
+.navbar-smart-wh .navbar-nav > li > .dropdown-menu,
+.dropdown-menu-smart-wh {
+  background-color: #0f5738;
+}
+.navbar-smart-wh .navbar-nav > li > .dropdown-menu > li > a,
+.dropdown-menu-smart-wh > a{
+  color: #ffffff;
+}
+.navbar-smart-wh .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-smart-wh .navbar-nav > li > .dropdown-menu > li > a:focus,
+.dropdown-menu-smart-wh > a:hover,
+.dropdown-menu-smart-wh > a:focus{
+  color: #ffffff !important;
+  background-color: #003a21 !important;
+}
+.navbar-smart-wh .navbar-nav > li > .dropdown-menu > li.divider {
+  background-color: #003a21;
+}
+.navbar-smart-wh .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-smart-wh .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-smart-wh .navbar-nav .open .dropdown-menu > .active > a:focus
+{
+  color: #ffffff;
+  background-color: #003a21;
+}
+.navbar-smart-wh .navbar-nav > .active > a,
+.navbar-smart-wh .navbar-nav > .active > a:hover,
+.navbar-smart-wh .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #003A21;
+}
+.navbar-smart-wh .navbar-nav > .disabled > a,
+.navbar-smart-wh .navbar-nav > .disabled > a:hover,
+.navbar-smart-wh .navbar-nav > .disabled > a:focus {
+  color: #444444;
+  background-color: transparent;
+}
+.navbar-smart-wh .navbar-nav > .open > a,
+.navbar-smart-wh .navbar-nav > .open > a:hover,
+.navbar-smart-wh .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #003A21;
+}
+@media (max-width: 767px) {
+  .navbar-smart-wh .navbar-nav .open .dropdown-menu > .dropdown-header {
+    border-color: #003A21;
+  }
+  .navbar-smart-wh .navbar-nav .open .dropdown-menu .divider {
+    background-color: #003A21;
+  }
+  .navbar-smart-wh .navbar-nav .open .dropdown-menu > li > a,
+  .open .dropdown-menu-smart-wh > a{
+    color: #ffffff;
+  }
+  .navbar-smart-wh .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-smart-wh .navbar-nav .open .dropdown-menu > li > a:focus,
+  .open .dropdown-menu-smart-wh > a:hover,
+  .open .dropdown-menu-smart-wh > a:focus{
+    color: #ffffff;
+    background-color: #003A21;
+  }
+  .navbar-smart-wh .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-smart-wh .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-smart-wh .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #003A21;
+  }
+  .navbar-smart-wh .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-smart-wh .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-smart-wh .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #444444;
+    background-color: transparent;
+  }
+}
+.navbar-smart-wh .navbar-toggle {
+  border-color: transparent;
+}
+.navbar-smart-wh .navbar-toggle:hover,
+.navbar-smart-wh .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar-smart-wh .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-smart-wh .navbar-collapse,
+.navbar-smart-wh .navbar-form {
+  border-color: #08492D; /*#08492D*/
+}
+.navbar-smart-wh .navbar-link {
+  color: #ffffff;
+}
+.navbar-smart-wh .navbar-link:hover {
+  color: #ffffff;
+}
+.navbar-smart-wh .btn-link {
+  color: #ffffff;
+}
+.navbar-smart-wh .btn-link:hover,
+.navbar-smart-wh .btn-link:focus {
+  color: #ffffff;
+}
+.navbar-smart-wh .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-smart-wh .btn-link:hover,
+.navbar-smart-wh .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-smart-wh .btn-link:focus {
+  color: #444444;
+}
+
